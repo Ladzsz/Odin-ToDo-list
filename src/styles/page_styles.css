@@ -1,0 +1,130 @@
+/* Styling body and html */
+html {
+    background-color: #D9C3C2;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* Styling all links */
+a {
+    text-decoration: none;
+}
+
+/* Styling header */
+header {
+    background-color: #8A7F8D;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    flex-wrap: wrap;
+}
+
+/* Header Media query for smaller screens */
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
+        justify-content: center;
+        gap: 30px;
+    }
+}
+
+/* Styling all header elements */
+header > a, header > p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling the header's Title */
+header > p {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+/* Styling the header's link */
+header > a {
+    background-color: #D9C3C2;
+    color: black;
+    padding: 20px;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+header > a:hover {
+    color: darkblue;
+}
+
+/* Styling the card section */
+.card_section {
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Styling the top of card section */
+.top_card_sec {
+    text-align: center;
+}
+
+/* Styling add button */
+.add-btn {
+    margin-top: 2%;
+    background-color: #8A7F8D;
+    color: black;
+    padding: 20px;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.add-btn:hover {
+    color: #D9C3C2;
+}
+
+/* Styling the form */
+.input-form {
+    margin-top: 5%;
+    text-align: center;
+    background-color: #8A7F8D;
+    border-radius: 16px;
+    padding: 10px;
+    display: none;
+}
+
+/* Styling the fieldset */
+fieldset {
+    border: none;
+}
+
+/* Styling the label */
+label {
+    font-weight: bold;
+}
+
+/* Styling input and textarea */
+input, textarea {
+    background-color: #D9C3C2;
+    border-radius: 6px;
+}
+
+/* Styling submit button */
+.submit-btn {
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
