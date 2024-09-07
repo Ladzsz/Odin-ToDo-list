@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',  // Entry point (where Webpack starts bundling)
@@ -8,16 +9,29 @@ module.exports = {
   },
   mode: 'development', // Change to 'production' for optimized builds
 
+  module: {
+    rules: [
+      {
+        test: /\.css$/,  // Regex to match CSS files
+        use: [
+          'style-loader',  // Injects CSS into the DOM
+          'css-loader'     // Resolves CSS imports
+        ],
+      },
+    ],
+  },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',  // Path to your HTML file
     }),
   ],
-  
-  rules: [
-    {
-      test: /\.css$/,  // Regex to match CSS files
-      use: ['style-loader', 'css-loader'],  // Loaders to use for CSS
+
+  devServer: {
+    static: {
+      directory: path.join(__dirname, 'dist'),
     },
-  ],
+    compress: true,
+    port: 9000,  // Port number where the server will run
+  },
 };

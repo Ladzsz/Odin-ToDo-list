@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+<script defer src="bundle.js"></script></head>
+<body>
+    <!--Header Area-->
+    <header>
+        <p>Lad Odin-ToDoList</p>
+    </header>
+
+    <!--Card items section-->
+    <section class="card_section">
+        <!--Top of the card section-->
+        <div class="top_card_sec">
+            <h2>Lets not forget a thing!<br>Add your tasks Below.</h2>
+            <button class="add-btn">Add Project</button>
+        </div>
+
+        <!--Form to get user input-->
+        <form class="input-form" style="display: none;"> <!-- Form is hidden by default -->
+            <legend><h2>Enter Task Below</h2></legend>
+
+            <!--grabbing user input-->
+            <fieldset>
+                <!--task name-->
+                <label for="projectName">Project Name:</label><br>
+                <input type="text" id="projectName" name="projectName" required><br><br>
+
+                <!--task description-->
+                <label for="projectDescription">Project Description:</label><br>
+                <textarea id="projectDescription" name="projectDescription" rows="4" cols="35" required></textarea><br><br>
+
+                <!--submit-->
+                <input type="submit" value="Submit" class="submit-btn">
+            </fieldset>
+        </form>
+
+        <!--card area of card section-->
+        <div class="card_area">
+            <!--Area to hold project cards-->
+            <div class="card-container"></div>
+        </div>
+    </section>
+
+    <!--Footer area-->
+    <footer>
+
+    </footer>
+    
+
+    <!--Calling js-->
+    <script src="bundle.js"></script>
+</body>
+</html>
