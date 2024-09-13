@@ -1,0 +1,40 @@
+/* Modal Container */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed positioning to stay in place */
+    z-index: 1000; /* High z-index to sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full viewport width */
+    height: 100%; /* Full viewport height */
+    overflow: auto; /* Enable scrolling if necessary */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+/* Modal Content (Form) */
+.modal-content {
+    background-color: #8A7F8D;
+    margin: auto;
+    padding: 20px;
+    border-radius: 16px;
+    width: 80%; /* Adjust as needed */
+    max-width: 600px; /* Max width for larger screens */
+}
+
+/* Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #D9C3C2;
+    text-decoration: none;
+    cursor: pointer;
+}

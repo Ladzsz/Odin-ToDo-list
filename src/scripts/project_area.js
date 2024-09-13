@@ -27,10 +27,12 @@ function Todolist() {
 
 // Function to create task cards
 function CreateTaskCards(Taskcards) {
-    const container = document.querySelector('.projectHead'); 
+    const container = document.querySelector('.projectHead')
+    const top_sec = document.querySelector(`.Top_btn_sec`); 
 
-    // Clear the container to avoid duplicating cards
+    // Clear the container and top card sec to avoid duplicating cards
     container.innerHTML = '';
+    top_sec.innerHTML = '';
 
     Taskcards.forEach((task, index) => {
         // Creating task cards
@@ -44,7 +46,7 @@ function CreateTaskCards(Taskcards) {
 
         // Adding the task name to the task name area
         const Tname = document.createElement('h3');
-        Tname.textContent = `Task: ${task.TaskName}`;
+        Tname.textContent = `Project: ${task.TaskName}`;
         Tname_area.appendChild(Tname);
 
         // Creating description area
@@ -75,10 +77,17 @@ function CreateTaskCards(Taskcards) {
         done_btn.textContent = 'Done';
         done_btn.className = 'done-btn';
 
+        const show_btn = document.createElement('button');
+        show_btn.textContent = `${task.TaskName}`;
+        show_btn.className = 'show-btn';
+
         // Adding buttons to button area
         Tbtn_area.appendChild(edit_btn);
         Tbtn_area.appendChild(remove_btn);
         Tbtn_area.appendChild(done_btn);
+
+        //appending show buttons too earlir section
+        top_sec.appendChild(show_btn);
 
         // Setting the initial color of the done button
         if (task.done) {
@@ -147,6 +156,17 @@ function CreateTaskCards(Taskcards) {
             // Save updated tasks to localStorage
             saveTasksToLocalStorage();
         }
+
+        // Event listener to show/hide the task card
+        show_btn.addEventListener('click', function() {
+            // Hide all cards
+            document.querySelectorAll('.project_card').forEach(card => {
+                card.style.display = 'none';
+            });
+
+            // Show only the clicked card
+            card.style.display = 'block';
+        });
     });
 }
 
