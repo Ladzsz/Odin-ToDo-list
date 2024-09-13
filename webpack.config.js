@@ -33,5 +33,6 @@ module.exports = {
     },
     compress: true,
     port: 9000,  // Port number where the server will run
+    open: true
   },
 };

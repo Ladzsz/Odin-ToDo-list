@@ -1,0 +1,35 @@
+/*styling project card*/
+.project_card {
+    background-color: #F5F5F5;
+    border: 1px solid #8A7F8D;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 10px;
+    width: 80%;
+    max-width: 400px;
+}
+
+/*styling project name and description*/
+.Projectname-area, .Projectdesc-area {
+    margin-bottom: 10px;
+}
+
+/*styling project buttons area*/
+.project-btns-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*styling project buttons*/
+.edit-btn, .remove-btn, .done-btn {
+    background-color: #8A7F8D;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn:hover, .remove-btn:hover, .done-btn:hover {
+    background-color: #6C6C6C;
+}

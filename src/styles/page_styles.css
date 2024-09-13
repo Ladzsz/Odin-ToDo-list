@@ -67,7 +67,7 @@ header > a:hover {
 }
 
 /* Styling the card section */
-.card_section {
+.projectSec {
     margin-top: 5%;
     display: flex;
     justify-content: center;
