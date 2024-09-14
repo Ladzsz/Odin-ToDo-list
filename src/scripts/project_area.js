@@ -19,6 +19,14 @@ document.querySelector(".add-btn").addEventListener('click', function() {
     editingTaskIndex = null;
 });
 
+// Event listener to make show all button display all projects again
+document.querySelector(".show_all_btn").addEventListener('click', function() {
+    // show all cards
+    document.querySelectorAll('.project_card').forEach(card => {
+        card.style.display = 'block';
+    });
+});
+
 // Function to create the todo list
 function Todolist() {
     // Load tasks from localStorage when the program starts
@@ -89,11 +97,18 @@ function CreateTaskCards(Taskcards) {
         //appending show buttons too earlir section
         top_sec.appendChild(show_btn);
 
+        //creating display area for tasks
+        const task_area = document.createElement('div');
+        task_area.classList.add('task_area');
+        
+        //appending the div to the cards
+        card.appendChild(task_area);
+
         // Setting the initial color of the done button
         if (task.done) {
             done_btn.style.backgroundColor = 'green';
         } else {
-            done_btn.style.backgroundColor = '#D9C3C2';
+            done_btn.style.backgroundColor = '#8A7F8D';
         }
 
         // Event listener to toggle the done state
@@ -112,13 +127,13 @@ function CreateTaskCards(Taskcards) {
                 if (checkRemove === 'YES') {
                     remove_card();
                     // Reset button color after removal
-                    done_btn.style.backgroundColor = '#D9C3C2';
+                    done_btn.style.backgroundColor = '#8A7F8D';
                 } else if (checkRemove === 'NO') {
                     done_btn.style.backgroundColor = 'green';
                 }
             } else {
                 // If task is not done, reset the button color to the default
-                done_btn.style.backgroundColor = '#D9C3C2';
+                done_btn.style.backgroundColor = '#8A7F8D';
             }
         });
 

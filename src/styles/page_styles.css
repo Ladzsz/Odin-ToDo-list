@@ -32,6 +32,7 @@ header {
     border-bottom-left-radius: 16px;
     border-bottom-right-radius: 16px;
     flex-wrap: wrap;
+    margin-bottom: 2%;
 }
 
 /* Header Media query for smaller screens */
@@ -71,7 +72,7 @@ header > a:hover {
 
 /* Styling the card section */
 .projectSec {
-    margin-top: 5%;
+    margin-top: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,6 +82,11 @@ header > a:hover {
 /* Styling the top of card section */
 .top_card_sec {
     text-align: center;
+}
+
+/*styling add btn*/
+.add-btn {
+    margin-bottom: 2%;
 }
 
 /* Styling add button */
@@ -96,7 +102,7 @@ header > a:hover {
 }
 
 .add-btn:hover {
-    color: #D9C3C2;
+    color: white;
 }
 
 /* Styling the form */
@@ -132,17 +138,17 @@ input, textarea {
     cursor: pointer;
 }
 
-/*styling footer*/
-.footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+/* Footer styling */
+footer {
     width: 100%;
-    background-color: black;
+    background-color: #8A7F8D;
     color: black;
     text-align: center;
-    padding: 20px;
+    padding-top: 30px;
     height: 50px;
+    margin-top: 2%;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
 }
 
 .footer_con {

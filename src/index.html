@@ -11,12 +11,14 @@
         <p>Lad Odin-ToDoList</p>
     </header>
 
+    <main>
     <!--Card items section-->
     <section class="card_section">
         <!--Top of the card section-->
         <div class="top_card_sec">
             <h2>Lets not forget a thing!<br>Add your tasks Below.</h2>
             <button class="add-btn">Add Project</button>
+            <button class="show_all_btn">Show All</button>
             <div class="Top_btn_sec"></div>
         </div>
 
@@ -26,17 +28,12 @@
             <div class="projectHead">
 
             </div>
-
-            <!--project body-->
-            <div class="projectBody">
-
-            </div>
         </section>
 
         <!-- Modal Container -->
         <div id="myModal" class="modal">
             <!-- Modal Content -->
-            <div class="modal-content">
+            <div class="modal-content" id="">
                 <!-- Close Button -->
                 <span class="close" id="closeModal">&times;</span>
                 <!-- Form to get user input -->
@@ -66,10 +63,10 @@
     <footer>
         <div class="footer_con"></div>
             &copy; 2024 London Mason
-          </div>
+        </div>
     </footer>
+</main>
     
-
     <!--Calling js-->
     <script src="bundle.js"></script>
 </body>

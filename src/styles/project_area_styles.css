@@ -1,35 +1,80 @@
-/*styling project card*/
+/* General Styles for the Card Container */
 .project_card {
-    background-color: #F5F5F5;
-    border: 1px solid #8A7F8D;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 10px;
-    width: 80%;
-    max-width: 400px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 16px;
+    margin: 16px 0;
+    max-width: 300px;
+    overflow: auto;
 }
 
-/*styling project name and description*/
-.Projectname-area, .Projectdesc-area {
-    margin-bottom: 10px;
+/* Styles for the Task Name Area */
+.Projectname-area {
+    margin-bottom: 12px;
 }
 
-/*styling project buttons area*/
+/* Styles for the Task Description Area */
+.Projectdesc-area {
+    margin-bottom: 12px;
+}
+
+/* Styles for the Buttons Container */
 .project-btns-area {
     display: flex;
     justify-content: space-between;
+    margin-top: 12px;
 }
 
-/*styling project buttons*/
-.edit-btn, .remove-btn, .done-btn {
+/* Styles for Individual Buttons */
+.project-btns-area button {
+    background-color: #8A7F8D;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0 4px;
+}
+
+/*styling show all btn*/
+.show_all_btn {
+    margin-top: 2%;
     background-color: #8A7F8D;
     color: black;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
+    padding: 20px;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 1.2em;
     cursor: pointer;
+    margin-bottom: 3%;
 }
 
-.edit-btn:hover, .remove-btn:hover, .done-btn:hover {
-    background-color: #6C6C6C;
+.show-btn {
+    background-color: #8A7F8D;
+    border: none;
+    border-radius: 4px;
+    color: black;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 8px 12px;
+    margin: 0 4px;
+    font-weight: bold;
+}
+
+/* Button Hover Effects */
+.project-btns-area button:hover,
+.show-btn:hover, .show_all_btn:hover, .done-btn:hover {
+    color: white;
+}
+
+/* Styles for Task Name and Description */
+.Projectname-area h3, 
+.Projectdesc-area h3 {
+    margin: 0;
+    font-size: 16px;
+    color: black;
 }
