@@ -1,0 +1,37 @@
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+build/
+*.tgz
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*.local
+
+# OS and Editor specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.sublime-workspace
+.idea/
+
+# Coverage reports
+coverage/
+
+# Temporary files
+tmp/
+temp/
+
+# Other
+*.bak
+*.tmp
+*.swp
+*.swo
+
+# Ignore Webpack specific files if necessary
+.webpack/
