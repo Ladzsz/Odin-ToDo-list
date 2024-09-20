@@ -18,7 +18,8 @@
         <div class="top_card_sec">
             <h2>Lets not forget a thing!<br>Add your tasks Below.</h2>
             <button class="add-btn">Add Project</button>
-            <button class="show_all_btn">Show All</button>
+            <button class="add-task-btn">Add Task to Project</button>
+            <button class="show-btn">Show All</button>
             <div class="Top_btn_sec"></div>
         </div>
 
@@ -49,6 +50,37 @@
                         <!-- Task description -->
                         <label for="projectDescription">Project Description:</label><br>
                         <textarea id="projectDescription" name="projectDescription" rows="4" cols="35" required></textarea><br><br>
+
+                        <!-- Submit -->
+                        <input type="submit" value="Submit" class="submit-btn">
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Container -->
+        <div id="taskModal" class="modal">
+            <!-- Modal Content -->
+            <div class="modal-content">
+                <!-- Close Button -->
+                <span class="close" id="closeModal">&times;</span>
+                <!-- Form to get user input -->
+                <form class="input-form" id="modalForm">
+                    <legend><h2>Add Task Below</h2></legend>
+
+                    <!-- Grabbing user input -->
+                    <fieldset>
+                        <!-- Task name -->
+                        <label for="taskName">Task Name:</label><br>
+                        <input type="text" id="taskName" name="taskName" required><br><br>
+
+                        <!-- Task description -->
+                        <label for="taskDescription">Task Description:</label><br>
+                        <textarea id="taskDescription" name="taskDescription" rows="4" cols="35" required></textarea><br><br>
+
+                        <!-- Task date -->
+                        <label for="taskDate">Due Date:</label><br>
+                        <input type="date" id="taskDate" name="taskDate" required><br><br>
 
                         <!-- Submit -->
                         <input type="submit" value="Submit" class="submit-btn">

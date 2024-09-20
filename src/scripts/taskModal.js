@@ -1,4 +1,4 @@
-export function initializeModal(triggerSelector, modalSelector, closeSelector, formSelector) {
+export function initializeTaskModal(triggerSelector, modalSelector, closeSelector, formSelector) {
     const modal = document.querySelector(modalSelector);
     const trigger = document.querySelector(triggerSelector);
     const close = document.querySelector(closeSelector);
@@ -25,7 +25,7 @@ export function initializeModal(triggerSelector, modalSelector, closeSelector, f
     form.addEventListener('submit', (event) => {
         event.preventDefault(); // Prevent default form submission
 
-        // Close the modal after submission
+        // Close the modal after subm1ission
         modal.style.display = 'none';
 
         // Clear the form fields

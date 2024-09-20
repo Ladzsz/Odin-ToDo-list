@@ -1,31 +1,28 @@
-//importin style sheet
+// Importing styles
 import './styles/page_styles.css';
-
-//importing project area styles
 import './styles/project_area_styles.css';
-
-//importing the modal styles
 import './styles/modal_styles.css';
 
-//importing project js
-import { CreateProject } from './scripts/project_area';
-
-//importing modal js
+// Importing modal logic
 import { initializeModal } from './scripts/modal';
 
-// Initialize button event listener
+// Importing task modal logic
+import { initializeTaskModal } from './scripts/taskModal';
+
+// Initialize button event listener for the add project button
 document.querySelector('.add-btn').addEventListener('click', function(event) {
-    event.preventDefault(); 
-
-    // Display the form when the button is clicked
-    document.querySelector('.input-form').style.display = 'block';
+    event.preventDefault();
+    // Show the project modal
+    document.querySelector('#myModal').style.display = 'flex';
 });
 
-//initialize form submission event listener
-document.querySelector('.input-form').addEventListener('submit', function(event) {
-    event.preventDefault(); 
-    CreateProject();
+// Initialize button event listener for the add task button
+document.querySelector('.add-task-btn').addEventListener('click', function(event) {
+    event.preventDefault();
+    // Show the task modal
+    document.querySelector('#taskModal').style.display = 'flex';
 });
 
-// Initialize the modal
-initializeModal('.add-btn', '#myModal', '#closeModal', '#modalForm');
+// Initialize the modals
+initializeModal('.add-btn', '#myModal', '#closeModal', '#modalForm'); // For project modal
+initializeTaskModal('.add-task-btn', '#taskModal', '#closeModal', '#modalForm') //for task modal
