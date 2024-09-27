@@ -1,12 +1,16 @@
+//exporting the inizlize modal and setting variables
 export function initializeModal(triggerSelector, modalSelector, closeSelector, formSelector) {
     const modal = document.querySelector(modalSelector);
-    const trigger = document.querySelector(triggerSelector);
+    const triggers = document.querySelectorAll(triggerSelector); // Changed variable name to 'triggers'
+    const editTriggers = document.querySelectorAll(editTriggerSelector);
     const close = document.querySelector(closeSelector);
     const form = document.querySelector(formSelector);
 
-    // Open the modal
-    trigger.addEventListener('click', () => {
-        modal.style.display = 'flex';
+    // Open the modal for all trigger buttons
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', () => {
+            modal.style.display = 'flex';
+        });
     });
 
     // Close the modal

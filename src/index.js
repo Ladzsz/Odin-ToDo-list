@@ -9,18 +9,13 @@ import { initializeModal } from './scripts/modal';
 // Importing task modal logic
 import { initializeTaskModal } from './scripts/taskModal';
 
-// Initialize button event listener for the add project button
-document.querySelector('.add-btn').addEventListener('click', function(event) {
-    event.preventDefault();
-    // Show the project modal
-    document.querySelector('#myModal').style.display = 'flex';
-});
+//importing js
+import { ProjectList, saveProjectsToLocalStorage, loadProjectsFromLocalStorage } from './scripts/project_area';
 
-// Initialize button event listener for the add task button
-document.querySelector('.add-task-btn').addEventListener('click', function(event) {
-    event.preventDefault();
-    // Show the task modal
-    document.querySelector('#taskModal').style.display = 'flex';
+
+//Initialize the project list
+document.addEventListener('DOMContentLoaded', () => {
+    ProjectList();
 });
 
 // Initialize the modals
