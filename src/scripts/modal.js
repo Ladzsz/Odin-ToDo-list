@@ -2,7 +2,6 @@
 export function initializeModal(triggerSelector, modalSelector, closeSelector, formSelector) {
     const modal = document.querySelector(modalSelector);
     const triggers = document.querySelectorAll(triggerSelector); // Changed variable name to 'triggers'
-    const editTriggers = document.querySelectorAll(editTriggerSelector);
     const close = document.querySelector(closeSelector);
     const form = document.querySelector(formSelector);
 
