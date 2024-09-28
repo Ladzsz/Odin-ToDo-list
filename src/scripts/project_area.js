@@ -1,3 +1,6 @@
+//importing js
+import { TaskCards } from './task_card_area';
+
 // Array to hold the projects
 let ProjectCards = [];
 
@@ -73,6 +76,20 @@ function CreateProjectCards(ProjectCards) {
         Pbtn_area.appendChild(remove_btn);
         Pbtn_area.appendChild(done_btn);
 
+        // Creating task container area
+        const task_area = document.createElement('div');
+        task_area.className = 'task-container';
+        card.appendChild(task_area);
+
+        // Display tasks related to this project
+        const projectTasks = TaskCards.filter(task => task.projectID === project.ProjectName);
+        projectTasks.forEach(task => {
+            const taskCard = document.createElement('div');
+            taskCard.className = 'task-card';
+            taskCard.textContent = `${task.TaskName} - ${task.description}`;
+            task_area.appendChild(taskCard);
+        });
+
         // Setting the initial color of the done button
         done_btn.style.backgroundColor = project.done ? 'green' : '#D9C3C2';
 
@@ -82,7 +99,7 @@ function CreateProjectCards(ProjectCards) {
             done_btn.style.backgroundColor = project.done ? 'green' : '#D9C3C2';
         });
 
-        // Event listener to edit the cards content
+        // Event listener to edit the card's content
         edit_btn.addEventListener('click', function() {
             // Populate the modal fields with the current project details
             document.getElementById("projectName").value = project.ProjectName;

@@ -12,10 +12,17 @@ import { initializeTaskModal } from './scripts/taskModal';
 //importing js
 import { ProjectList, saveProjectsToLocalStorage, loadProjectsFromLocalStorage } from './scripts/project_area';
 
+//importing js
+import { TaskList, saveTasksToLocalStorage, loadTasksFromLocalStorage } from './scripts/task_card_area';
 
 //Initialize the project list
 document.addEventListener('DOMContentLoaded', () => {
     ProjectList();
+});
+
+//Initialize the task list
+document.addEventListener('DOMContentLoaded', () => {
+    TaskList();
 });
 
 // Initialize the modals
