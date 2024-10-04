@@ -3,110 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-List</title>
+    <title>Lad odin todo</title>
 <script defer src="bundle.js"></script></head>
 <body>
-    <!--Header Area-->
-    <header>
-        <p>Lad Odin-ToDoList</p>
-    </header>
+    <!--header area-->
+    <header>Lad Todo</header>
 
-    <main>
-    <!--Card items section-->
-    <section class="card_section">
-        <div class="display_area"> 
-            <!--Top of the card section-->
-            <div class="top_card_sec">
-                <h2>Lets not forget a thing!<br>Add your tasks Below.</h2>
-                <button class="add-btn">Add Project</button>
-                <button class="add-task-btn">Add Task to Project</button>
-                <button class="show-btn">Show All</button>
-                <div class="Top_btn_sec"></div>
-            </div>
-
-        <!--project section-->
-        <section class="projectSec">
-            <!--project header-->
-            <div class="projectHead">
-                <h2>Projects Below</h2>
-            </div>
-
-            <div class="projectBody">
-                <div class="card-container"> 
-                    
-                </div>
-            </div>
-        </section>
-
-        <!-- Modal Container -->
-        <div id="myModal" class="modal">
-            <!-- Modal Content -->
-            <div class="modal-content" id="">
-                <!-- Close Button -->
-                <span class="close" id="closeModal">&times;</span>
-                <!-- Form to get user input -->
-                <form class="input-form" id="modalForm">
-                    <legend><h2>Enter Project Below</h2></legend>
-
-                    <!-- Grabbing user input -->
-                    <fieldset>
-                        <!-- Task name -->
-                        <label for="projectName">Project Name:</label><br>
-                        <input type="text" id="projectName" name="projectName" required><br><br>
-
-                        <!-- Task description -->
-                        <label for="projectDescription">Project Description:</label><br>
-                        <textarea id="projectDescription" name="projectDescription" rows="4" cols="35" required></textarea><br><br>
-
-                        <!-- Submit -->
-                        <input type="submit" value="Submit" class="submit-btn">
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-
-        <!-- Modal Container -->
-        <div id="taskModal" class="modal">
-            <!-- Modal Content -->
-            <div class="modal-content">
-                <!-- Close Button -->
-                <span class="close" id="closeModal">&times;</span>
-                <!-- Form to get user input -->
-                <form class="input-form" id="modalForm">
-                    <legend><h2>Add Task Below</h2></legend>
-
-                    <!-- Grabbing user input -->
-                    <fieldset>
-                        <!-- Task name -->
-                        <label for="taskName">Task Name:</label><br>
-                        <input type="text" id="taskName" name="taskName" required><br><br>
-
-                        <!-- Task description -->
-                        <label for="taskDescription">Task Description:</label><br>
-                        <textarea id="taskDescription" name="taskDescription" rows="4" cols="35" required></textarea><br><br>
-
-                        <!-- Task date -->
-                        <label for="taskDate">Due Date:</label><br>
-                        <input type="date" id="taskDate" name="taskDate" required><br><br>
-
-                        <!-- Submit -->
-                        <input type="submit" value="Submit" class="submit-btn">
-                    </fieldset>
-                </form>
-            </div>
-        </div>
-
+    <!--intro area-->
+    <section class="intro_area">
+        <h1>Add projects below!</h1>
     </section>
-</main>
 
-<!--Footer area-->
-<footer>
-    <div class="footer_con"></div>
-        &copy; 2024 London Mason
-    </div>
-</footer>
+    <!--main-->
+    <main>
+        
+    </main>
+
     
-<!--Calling js-->
-<script src="bundle.js"></script>
 </body>
 </html>
