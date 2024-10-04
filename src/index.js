@@ -4,3 +4,4 @@ import './styles/modal_styles.css';
 
 //linking js
 import './scripts/modal';
+import './scripts/project';
