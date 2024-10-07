@@ -9,6 +9,7 @@ class Project {
         this.name = name;
         this.description = description;
         this.done = false;
+        this.tasks = [];
     }
 }
 
@@ -32,6 +33,20 @@ formsubmit.addEventListener("click", function(event) {
     let Pname = document.getElementById('projectName').value.trim();
 
     let Pdesc = document.getElementById('projectDescription').value.trim();
+
+    // Check for existing project names to ensure user doesnt duplicate name
+    const existingProject = projects.find(project => project.name === Pname);
+    if (existingProject) {
+
+        // Display an error message
+        alert('A project with this name already exists.'); 
+
+        //making form display block to ensure form stays visible
+        form.style.display = "block";
+
+        // Stop further execution if the project already exists
+        return; 
+    }
 
     //if statement to check if in edit mode or not
     if (editingProjectIndex === null) {
