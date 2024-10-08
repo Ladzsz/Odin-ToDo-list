@@ -1,5 +1,5 @@
 //importing task js
-import { Task } from './task';
+import { Task, renderTaskCards } from './task';
 
 //making the array
 
@@ -186,6 +186,21 @@ function CreateProjectCards(projects) {
         task_area.className = 'task-container';
         task_area.setAttribute('data-project-name', project.name);
         card.appendChild(task_area);
+
+        // Event listener for showing tasks
+        card.addEventListener('click', function () {
+            // Close other task lists
+            const allTaskContainers = document.querySelectorAll('.task-container');
+            allTaskContainers.forEach(container => {
+                if (container !== task_area) {
+                    container.style.display = 'none'; // Hide other task lists
+                }
+            });
+
+            // Toggle the visibility of the task area
+            task_area.style.display = task_area.style.display === 'flex' ? 'none' : 'flex';
+            renderTaskCards(project, task_area); // Populate tasks
+        });
 
         // Event listener to edit the card's content
         edit_btn.addEventListener('click', function() {

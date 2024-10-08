@@ -73,7 +73,7 @@ taskFormSubmit.addEventListener("click", function(event) {
 
 // Function to render tasks inside a project
 // Function to render tasks inside a project
-function renderTaskCards(project) {
+export function renderTaskCards(project) {
     const taskContainer = document.querySelector(`.task-container[data-project-name="${project.name}"]`);
     if (!taskContainer) {
         console.error(`No task container found for project: ${project.name}`);

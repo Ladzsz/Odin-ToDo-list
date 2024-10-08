@@ -92,7 +92,7 @@
 
 .task-container {
     padding: 30px;
-    display: flex;
+    display: none;
     justify-content: center;
     flex-direction: column;
     gap: 25px;
