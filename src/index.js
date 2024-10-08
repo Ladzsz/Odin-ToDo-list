@@ -6,3 +6,4 @@ import './styles/card_styles.css';
 //linking js
 import './scripts/modal';
 import './scripts/project';
+import './scripts/task';

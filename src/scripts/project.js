@@ -1,16 +1,29 @@
+//importing task js
+import { Task } from './task';
+
 //making the array
 
-let projects = [];
+export let projects = [];
 
 //making the construcotr
 
-class Project {
+export class Project {
     constructor(name, description) {
         this.name = name;
         this.description = description;
         this.done = false;
         this.tasks = [];
     }
+
+    // Method to add a task to the project
+    addTask(task) {
+        this.tasks.push(task);
+    }
+}
+
+// Function to find a project by name
+export function findProjectByName(projectName) {
+    return projects.find(project => project.name === projectName);
 }
 
 // Variable to track the project being edited
@@ -74,18 +87,26 @@ formsubmit.addEventListener("click", function(event) {
 });
 
 // Function to save the projects array to localStorage
-function saveProjectsToLocalStorage() { 
+export function saveProjectsToLocalStorage() { 
     localStorage.setItem('projects', JSON.stringify(projects));
 }
 
-// Function to load the projects array from localStorage
+//function to load projects
 function loadProjectsFromLocalStorage() {
     const savedProjects = localStorage.getItem('projects');
     if (savedProjects) {
-        // Clear the existing array
-        projects.length = 0;
-        // Load saved projects into the array
-        projects.push(...JSON.parse(savedProjects)); 
+        projects.length = 0; // Clear the existing array
+        const parsedProjects = JSON.parse(savedProjects);
+        
+        // Recreate Project instances and assign tasks
+        parsedProjects.forEach((proj) => {
+            const project = new Project(proj.name, proj.description);
+            // Convert task objects back to Task instances if needed
+            proj.tasks.forEach(task => {
+                project.addTask(new Task(task.name, task.description, task.dueDate, proj.name));
+            });
+            projects.push(project);
+        });
     }
 }
 
@@ -163,6 +184,7 @@ function CreateProjectCards(projects) {
         // Creating task container area
         const task_area = document.createElement('div');
         task_area.className = 'task-container';
+        task_area.setAttribute('data-project-name', project.name);
         card.appendChild(task_area);
 
         // Event listener to edit the card's content
