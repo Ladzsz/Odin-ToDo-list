@@ -79,3 +79,19 @@ footer {
         font-size: 0.9em;
     }
 }
+
+/*styling the buttons*/
+.btn-container > button {
+    background-color: #35424a;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.9em;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.btn-container > button:hover {
+    background-color: #35424a;
+    color: blue;
+}

@@ -24,8 +24,8 @@ taskFormSubmit.addEventListener("click", function(event) {
     // Grabbing task form elements
     let taskName = document.getElementById('taskName').value.trim();
     let taskDesc = document.getElementById('taskDescription').value.trim();
-    let taskDueDate = document.getElementById('taskDueDate').value.trim(); // Ensure the correct ID
-    let taskProjectName = document.getElementById('taskProjectName').value.trim(); // Ensure the correct ID
+    let taskDueDate = document.getElementById('taskDueDate').value.trim(); 
+    let taskProjectName = document.getElementById('taskProjectName').value.trim();
 
     // Find the relevant project
     const project = findProjectByName(taskProjectName);
@@ -71,8 +71,8 @@ taskFormSubmit.addEventListener("click", function(event) {
     // Clear input fields
     document.getElementById('taskName').value = '';
     document.getElementById('taskDescription').value = '';
-    document.getElementById('taskDueDate').value = ''; // Ensure the correct ID
-    document.getElementById('taskProjectName').value = ''; // Ensure the correct ID
+    document.getElementById('taskDueDate').value = ''; 
+    document.getElementById('taskProjectName').value = ''; 
 
     // Hide the task modal
     document.getElementById('taskModal').style.display = 'none';
