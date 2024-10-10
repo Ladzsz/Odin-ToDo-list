@@ -30,8 +30,15 @@ taskFormSubmit.addEventListener("click", function(event) {
     // Find the relevant project
     const project = findProjectByName(taskProjectName);
 
+    //ensure project actually exists
     if (!project) {
         alert('Project not found.');
+        return;
+    }
+
+    // If editing a task, ensure the project isn't changed
+    if (editingTaskIndex !== null && taskProjectName !== editingTaskProjectName) {
+        alert('Cannot change the project of an existing task.');
         return;
     }
 
